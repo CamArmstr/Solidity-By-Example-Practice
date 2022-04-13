@@ -20,12 +20,12 @@ contract Variables {
     address payable coinbase = block.coinbase; //current block miner's address
     uint difficulty = block.difficulty; //current block gaslimit
     uint blockNum = block.number; //current block number
-    uint256 gasRemaining = gasleft() //CHECK THIS OUT
-    bytes calldata = msg.data; //complete calldata for msg
-    address sender = msg.sender; //sender
+    uint256 gasRemaining = gasleft(); //CHECK THIS OUT
+    // bytes calldata = msg.data; //complete calldata for msg
+    address x = msg.sender; //sender
     bytes4 signature = msg.sig; //first 4 bytes of message (COLLISION RISK)
     uint value = msg.value; //# of wei sent with message
     uint gasPrice = tx.gasprice; //transaction gas price
-    address sender = tx.origin; //transaction sender (full call chain)
+    address y = tx.origin; //transaction sender (full call chain)
 
 }
