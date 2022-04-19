@@ -21,6 +21,10 @@ contract HashTest {
 
 
 // NEED TO SIGN HASH WITH PRIVATE KEY OFF CHAIN SOMEWHERE LIKE METAMASK ETC
+// Use code in browser: 
+// 1 - ethereum.enable.then(console.log)
+// hash = output of getHash, account = signing wallet address
+// 2 - ethereum.request({method: “personal_sign”, params: [account, hash]}).then(console.log)
 
 // Creates hash of concatenated message with prefix "\x19Ethereum..." with message hash by convention
     function getEthSignedHash(bytes32 _messageHash) public pure returns (bytes32) {
