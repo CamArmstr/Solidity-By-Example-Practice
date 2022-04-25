@@ -35,7 +35,7 @@ contract Function {
     uint[] public arr;
 
     function arrayOutput() public view returns(uint[] memory) {
-        return arr;
+        return arr;     
     }
 
 
