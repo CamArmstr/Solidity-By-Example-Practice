@@ -1,7 +1,7 @@
 pragma solidity ^0.8.10;
 
 contract Base {
-    function testPrivateFunc() private pure returns (string memory) {
+    function privateFunc() private pure returns (string memory) {
         return "private called";
     }
 
@@ -10,7 +10,7 @@ contract Base {
     }
 
     function internalFunc() internal pure returns (string memory) {
-        return "internal func"
+        return "internal func";
     }
 
     function testInternalFunc() public pure virtual returns (string memory) {
@@ -28,20 +28,19 @@ contract Base {
     string private privateVar = "private";
     string internal internalVar = "internal";
     string public publicVar = "public";
-
-    contract Child is Base {
-        function testInternalFunc() public pure override returns (string memory) {
-            return internalFunc();
-        }
-    }
-
-
-
-
-
-
-
-
-
-
 }
+contract Child is Base {
+    function testInternalFunc() public pure override returns (string memory) {
+        return internalFunc();
+    }
+}
+
+
+
+
+
+
+
+
+
+
