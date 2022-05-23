@@ -18,6 +18,7 @@ contract Y {
 }
 
 // When using other contracts to instantiate a contract, Can pass inputs in via the inheritance list 
+// Amazing
 contract B is X("Input to X"), Y("Input to Y") {
 
 }
